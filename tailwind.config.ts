@@ -14,9 +14,10 @@ export default {
         orange: '#ED672B',
         orangeHover: '#E95808',
         purple: '#8224CB',
-        headerGray: '#555555',
-        inputHover: '#EDF1F4'
+        inputHover: '#EDF1F4',
+        link: '#2362AF'
       },
+
       height: {
         '78': '78px',
         'banner': '640px',
