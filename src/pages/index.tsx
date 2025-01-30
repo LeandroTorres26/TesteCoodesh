@@ -5,6 +5,11 @@ import CallToAction from "@/components/layout/callToAction/CallToAction";
 import Carousel from "@/components/layout/carousel/Carousel";
 import Intro from "@/components/layout/intro/Intro";
 import Filters from "@/components/layout/filters/Filters";
+import States from "@/components/layout/states/States";
+import Reasons from "@/components/layout/reasons/Reasons";
+import Blog from "@/components/layout/blog/Blog";
+import JoinUs from "@/components/layout/joinUs/JoinUs";
+import Footer from "@/components/layout/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,15 +27,17 @@ export default function Home() {
       className={`${geistSans.variable} ${geistMono.variable} min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]`}
     >
       <Header/>
-
       <main className="flex flex-col items-center sm:items-start mt-16">
         <CallToAction/>
         <Carousel/>
         <Intro/>
         <Filters/>
+        <States/>
+        <Reasons/>
+        <Blog/>
+        <JoinUs/>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer>
+      <Footer/>
     </div>
   );
 }

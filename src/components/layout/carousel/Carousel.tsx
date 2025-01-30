@@ -78,7 +78,7 @@ const Carousel = () => {
             <h2 className="text-2xl">
               Novos Anúncios em
               <div className='relative inline-block ml-2'>
-                <button className="text-orange" onClick={toggleDropdown}>{selectedPlace}<Image src="/down-arrow-orange.svg" alt="" width={20} height={16} className="inline-block"/></button>
+                <button className="text-orange-500" onClick={toggleDropdown}>{selectedPlace}<Image src="/down-arrow-orange.svg" alt="" width={20} height={16} className="inline-block"/></button>
                 {Open && (
                   <ul className="absolute top-8 whitespace-nowrap rounded-2xl shadow-xl overflow-hidden bg-white z-10">
                     {places.map((place) => (
@@ -91,7 +91,7 @@ const Carousel = () => {
 
               </div>
             </h2>
-            <Link href="#" className="text-link hover:brightness-75 visited:text-purple-600">Ver todos os imóveis <Image src="/external-link.svg" alt="" width={24} height={24} className="inline-block"/></Link>
+            <Link href="#" className="text-[#2362AF] hover:brightness-75 visited:text-purple-700-600">Ver todos os imóveis <Image src="/external-link.svg" alt="" width={24} height={24} className="inline-block"/></Link>
             <Slider {...settings} className="grid grid-cols-4 gap-6 mt-4">
               {flats.filter(flat => flat.City === selectedPlace).map((flat, index) => (
                 <li key={index}>
@@ -108,7 +108,7 @@ const Carousel = () => {
                       <ul className="flex gap-2 text-xs">{flat.Tags.map((tag, index) => (
                         <li key={index} className="bg-[#f3f3f3] text-[#48617e] py-[2px] px-[6px] rounded-full capitalize">{tag}</li>
                       ))}</ul>
-                      <em className="text-orange font-bold mt-2 text-xl"> {flat.Price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0})}</em>
+                      <em className="text-orange-500 font-bold mt-2 text-xl"> {flat.Price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0})}</em>
                     </div>
                   </Link>
                 </li>
