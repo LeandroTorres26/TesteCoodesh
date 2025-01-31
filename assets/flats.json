@@ -4,11 +4,7 @@
     "Title": "Seaview Penthouse in Fortaleza",
     "Author": "Oceanfront Realty",
     "Rooms": 4,
-    "Tags": [
-      "elevator",
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["elevator", "furniture", "parking"],
     "Price": 900000
   },
   {
@@ -16,10 +12,7 @@
     "Title": "Modern Loft in Fortaleza",
     "Author": "Cityscape Properties",
     "Rooms": 1,
-    "Tags": [
-      "elevator",
-      "furniture"
-    ],
+    "Tags": ["elevator", "furniture"],
     "Price": 300000
   },
   {
@@ -27,10 +20,7 @@
     "Title": "Family-Friendly Apartment",
     "Author": "Sunset Homes",
     "Rooms": 3,
-    "Tags": [
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["furniture", "parking"],
     "Price": 550000
   },
   {
@@ -38,11 +28,7 @@
     "Title": "Resort-Style Living in Fortaleza",
     "Author": "Tropical Real Estate",
     "Rooms": 2,
-    "Tags": [
-      "elevator",
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["elevator", "furniture", "parking"],
     "Price": 700000
   },
   {
@@ -50,11 +36,7 @@
     "Title": "Luxury Apartment in Fortaleza",
     "Author": "Real Estate Company A",
     "Rooms": 3,
-    "Tags": [
-      "elevator",
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["elevator", "furniture", "parking"],
     "Price": 500000
   },
   {
@@ -62,10 +44,7 @@
     "Title": "Cozy Apartment in Fortaleza",
     "Author": "Comfort Homes",
     "Rooms": 2,
-    "Tags": [
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["furniture", "parking"],
     "Price": 400000
   },
   {
@@ -73,11 +52,7 @@
     "Title": "Hillside Villa in Belo Horizonte",
     "Author": "Elevated Estates",
     "Rooms": 5,
-    "Tags": [
-      "elevator",
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["elevator", "furniture", "parking"],
     "Price": 1200000
   },
   {
@@ -85,10 +60,7 @@
     "Title": "Historic District Apartment",
     "Author": "Heritage Homes",
     "Rooms": 2,
-    "Tags": [
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["furniture", "parking"],
     "Price": 400000
   },
   {
@@ -96,10 +68,7 @@
     "Title": "Executive Suite in Belo Horizonte",
     "Author": "Business Residences",
     "Rooms": 3,
-    "Tags": [
-      "elevator",
-      "furniture"
-    ],
+    "Tags": ["elevator", "furniture"],
     "Price": 600000
   },
   {
@@ -107,10 +76,7 @@
     "Title": "Scenic View Condo",
     "Author": "Vista Homes",
     "Rooms": 4,
-    "Tags": [
-      "elevator",
-      "parking"
-    ],
+    "Tags": ["elevator", "parking"],
     "Price": 900000
   },
   {
@@ -118,10 +84,7 @@
     "Title": "Cozy Apartment in Belo Horizonte",
     "Author": "Urban Living Properties",
     "Rooms": 3,
-    "Tags": [
-      "elevator",
-      "parking"
-    ],
+    "Tags": ["elevator", "parking"],
     "Price": 550000
   },
   {
@@ -129,10 +92,7 @@
     "Title": "Downtown Penthouse in Belo Horizonte",
     "Author": "City Center Residences",
     "Rooms": 2,
-    "Tags": [
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["furniture", "parking"],
     "Price": 700000
   },
   {
@@ -140,11 +100,7 @@
     "Title": "Sky-High Skyscraper Residence",
     "Author": "Altitude Living",
     "Rooms": 3,
-    "Tags": [
-      "elevator",
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["elevator", "furniture", "parking"],
     "Price": 1100000
   },
   {
@@ -152,9 +108,7 @@
     "Title": "Artistic Studio in São Paulo",
     "Author": "Creative Spaces",
     "Rooms": 1,
-    "Tags": [
-      "furniture"
-    ],
+    "Tags": ["furniture"],
     "Price": 350000
   },
   {
@@ -162,11 +116,7 @@
     "Title": "Tech Hub Apartment",
     "Author": "Innovation Homes",
     "Rooms": 2,
-    "Tags": [
-      "elevator",
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["elevator", "furniture", "parking"],
     "Price": 650000
   },
   {
@@ -174,10 +124,7 @@
     "Title": "Premium Downtown Condo",
     "Author": "Metropolitan Realty",
     "Rooms": 4,
-    "Tags": [
-      "elevator",
-      "parking"
-    ],
+    "Tags": ["elevator", "parking"],
     "Price": 850000
   },
   {
@@ -185,10 +132,7 @@
     "Title": "Modern Loft in São Paulo",
     "Author": "Urban Innovators",
     "Rooms": 2,
-    "Tags": [
-      "furniture",
-      "parking"
-    ],
+    "Tags": ["furniture", "parking"],
     "Price": 500000
   },
   {
@@ -196,11 +140,7 @@
     "Title": "City Center Penthouse",
     "Author": "Downtown Living",
     "Rooms": 3,
-    "Tags": [
-      "elevator",
-      "furniture"
-    ],
+    "Tags": ["elevator", "furniture"],
     "Price": 700000
   }
 ]
-

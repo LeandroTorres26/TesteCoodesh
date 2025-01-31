@@ -1,22 +1,29 @@
-import Link from 'next/link';
-import Image from 'next/image'
-
-import Slider, {CustomArrowProps} from "react-slick";
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
+import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 const States = () => {
   function NextArrow(props: CustomArrowProps) {
     const { className, style, onClick, currentSlide, slideCount } = props;
-    const disabled = (currentSlide ?? 0) + 3  === (slideCount ?? 0) - 1;
+    const disabled = (currentSlide ?? 0) + 3 === (slideCount ?? 0) - 1;
 
     return (
-        <div
-        className={`${className} flex justify-center items-center absolute top-[-3.5rem] right-5 ${disabled ? '!opacity-50 !cursor-default' : 'cursor-pointer'}`}
+      <div
+        className={`${className} absolute right-5 top-[-3.5rem] flex items-center justify-center ${
+          disabled ? "!cursor-default !opacity-50" : "cursor-pointer"
+        }`}
         style={{ ...style, display: "block" }}
         onClick={disabled ? undefined : onClick}
-        >
-        <Image src="/slide-arrow.svg" alt="Avançar Slide" width={40} height={40} />
-        </div>
+      >
+        <Image
+          src="/slide-arrow.svg"
+          alt="Avançar Slide"
+          width={40}
+          height={40}
+        />
+      </div>
     );
   }
 
@@ -26,11 +33,13 @@ const States = () => {
 
     return (
       <div
-      className={`${className} flex justify-center items-center rotate-180 absolute top-[-3.5rem] right-[4.5rem] ${disabled ? '!opacity-50 !cursor-default' : 'cursor-pointer'}`}
-      style={{ ...style, display: "block" }}
-      onClick={disabled ? undefined : onClick}
+        className={`${className} absolute right-[4.5rem] top-[-3.5rem] flex rotate-180 items-center justify-center ${
+          disabled ? "!cursor-default !opacity-50" : "cursor-pointer"
+        }`}
+        style={{ ...style, display: "block" }}
+        onClick={disabled ? undefined : onClick}
       >
-      <Image src="/slide-arrow.svg" alt="Recuar" width={40} height={40} />
+        <Image src="/slide-arrow.svg" alt="Recuar" width={40} height={40} />
       </div>
     );
   }
@@ -38,8 +47,8 @@ const States = () => {
   const settings = {
     dots: false,
     arrows: true,
-    nextArrow:<NextArrow />,
-    prevArrow:<PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -183,41 +192,86 @@ const States = () => {
 
   return (
     <section className="w-full py-28">
-        <div className="container mx-auto flex flex-col gap-28">
-            <div className="grid grid-cols-5 border border-#D0D5D8 rounded-2xl overflow-hidden">
-                <Image src="/images/advertise.png" width={822} height={420} alt="2 pessoas usando o Net Imóveis no celular." className="col-span-3 w-full h-full object-cover"/>
-                <div className="flex flex-col items-start p-8 gap-4 col-span-2">
-                    <h3 className="text-orange-500 font-bold">Quer Vender ou Alugar?</h3>
-                    <h4 className="text-[#393B3D] font-bold text-[2.125rem] max-w-[16ch]">Anuncie grátis<br/> para mais de 100 mil pessoas todos os dias.</h4>
-                    <Link href="#" className="border border-purple-700 rounded-[10px] bg-transparent hover:bg-purple-700 text-purple-700 hover:text-white py-3 px-4 mt-20 mb-2 duration-100 ease-linear">Anunciar Imóvel</Link>
-                    <Link href="#" className="text-[#4E5254] font-bold">Saiba quanto vale seu imóvel <Image src="/right-arrow.svg" alt="" width={14} height={12} className="inline-block"/></Link>
-                </div>
-            </div>
-            <div>
-              <h2 className="text-[#393B3D] font-bold text-[2.125rem] mb-10">Prontos para te Receber em mais de 10 estados</h2>
-              <Slider {...settings}>
-                {cities.map((location, index) => (
-                  <div key={index}>
-                    <div className="flex flex-col">
-                      <figure className="relative">
-                        <Image src={location.image} alt="Foto da Igreja São Francisco de Assis da Pampulha, em Belo Horizonte" width={294} height={192} className="rounded-2xl brightness-[80%]"/>
-                        <figcaption className="absolute bottom-0 p-4 text-2xl text-white font-bold">{location.state}</figcaption>
-                      </figure>
-                      <ul className="text-[#808587] text-sm flex flex-col gap-1 mt-4 ml-2">
-                        {location.items.map((item, index) => (
-                          <li key={index}><span className="text-orange-500">●</span>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="w-full bg-image-gradient bg-no-repeat bg-cover flex justify-between items-center py-8 px-14 rounded-2xl">
-              <h3 className="text-[2.125rem] text-white font-bold max-w-[18ch]">Encontre a oportunidade Perfeita em Portugal</h3>
-              <Link href="" className="bg-white text-orange-500 rounded-[0.625rem] font-semibold px-4 py-3">Ver imóveis em Portugal</Link>
-            </div>
+      <div className="container mx-auto flex flex-col gap-28">
+        <div className="grid grid-cols-5 overflow-hidden rounded-2xl border border-[#D0D5D8]">
+          <Image
+            src="/images/advertise.png"
+            width={822}
+            height={420}
+            alt="2 pessoas usando o Net Imóveis no celular."
+            className="col-span-3 h-full w-full object-cover"
+          />
+          <div className="col-span-2 flex flex-col items-start gap-4 p-8">
+            <h3 className="font-bold text-orange-500">
+              Quer Vender ou Alugar?
+            </h3>
+            <h4 className="max-w-[19ch] text-[2.125rem] font-bold text-[#393B3D]">
+              Anuncie grátis
+              <br /> para mais de 100 mil pessoas todos os dias.
+            </h4>
+            <Link
+              href="#"
+              className="mb-2 mt-20 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+            >
+              Anunciar Imóvel
+            </Link>
+            <Link href="#" className="font-bold text-[#4E5254]">
+              Saiba quanto vale seu imóvel{" "}
+              <Image
+                src="/right-arrow.svg"
+                alt=""
+                width={14}
+                height={12}
+                className="inline-block"
+              />
+            </Link>
+          </div>
         </div>
+        <div>
+          <h2 className="mb-10 text-[2.125rem] font-bold text-[#393B3D]">
+            Prontos para te Receber em mais de 10 estados
+          </h2>
+          <Slider {...settings}>
+            {cities.map((location, index) => (
+              <div key={index}>
+                <div className="flex flex-col">
+                  <figure className="relative">
+                    <Image
+                      src={location.image}
+                      alt="Foto da Igreja São Francisco de Assis da Pampulha, em Belo Horizonte"
+                      width={294}
+                      height={192}
+                      className="rounded-2xl brightness-[80%]"
+                    />
+                    <figcaption className="absolute bottom-0 p-4 text-2xl font-bold text-white">
+                      {location.state}
+                    </figcaption>
+                  </figure>
+                  <ul className="ml-2 mt-4 flex flex-col gap-1 text-sm text-[#808587]">
+                    {location.items.map((item, index) => (
+                      <li key={index}>
+                        <span className="text-orange-500">●</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <div className="flex w-full items-center justify-between rounded-2xl bg-image-gradient bg-cover bg-no-repeat px-14 py-8">
+          <h3 className="max-w-[21ch] text-[2.125rem] font-bold text-white">
+            Encontre a oportunidade Perfeita em Portugal
+          </h3>
+          <Link
+            href=""
+            className="rounded-[0.625rem] bg-white px-4 py-3 font-semibold text-orange-500"
+          >
+            Ver imóveis em Portugal
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };
