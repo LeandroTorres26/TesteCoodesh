@@ -1,5 +1,5 @@
 import { Source_Sans_3 } from "next/font/google";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "@/components/layout/header/Header";
 import CallToAction from "@/components/layout/callToAction/CallToAction";
 import Carousel from "@/components/layout/carousel/Carousel";
@@ -17,20 +17,33 @@ const sourceSans = Source_Sans_3({
 });
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       className={`${sourceSans.variable} min-h-screen gap-16 font-[family-name:var(--font-source-sans-3)]`}
     >
       <Header />
-      <main className="mt-16 flex flex-col items-center sm:items-start">
-        <CallToAction />
+      <main className="mt-16 flex flex-col items-center overflow-hidden sm:items-start">
+        <CallToAction isMobile={isMobile} />
         <Carousel />
-        <Intro />
-        <Filters />
+        <Intro isMobile={isMobile} />
+        <Filters isMobile={isMobile} />
         <States />
         <Reasons />
-        <Blog />
-        <JoinUs />
+        <Blog isMobile={isMobile} />
+        <JoinUs isMobile={isMobile} />
       </main>
       <Footer />
     </div>

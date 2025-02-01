@@ -5,7 +5,11 @@ import React, { useState } from "react";
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 
-const Filters = () => {
+interface Props {
+  isMobile: boolean;
+}
+
+const Filters: React.FC<Props> = ({ isMobile }) => {
   const [activeTab, setActiveTab] = useState("sun");
 
   function NextArrow(props: CustomArrowProps) {
@@ -25,6 +29,7 @@ const Filters = () => {
           alt="Avançar Slide"
           width={40}
           height={40}
+          className="w-[1.875rem] md:w-[2.5rem]"
         />
       </div>
     );
@@ -41,7 +46,13 @@ const Filters = () => {
         style={{ ...style, display: "block" }}
         onClick={disabled ? undefined : onClick}
       >
-        <Image src="/chevron-right.svg" alt="Recuar" width={40} height={40} />
+        <Image
+          src="/chevron-right.svg"
+          alt="Recuar"
+          width={40}
+          height={40}
+          className="w-[1.875rem] md:w-[2.5rem]"
+        />
       </div>
     );
   }
@@ -59,10 +70,10 @@ const Filters = () => {
 
   return (
     <section
-      className={`w-full bg-cover ${activeTab === "sun" ? "bg-[url(/images/banner-sun.png)]" : ""} ${activeTab === "pet" ? "bg-[url(/images/banner-pet.png)]" : ""} ${activeTab === "bus" ? "bg-[url(/images/banner-bus.png)]" : ""} ${activeTab === "balcony" ? "bg-[url(/images/banner-balcony.png)]" : ""} ${activeTab === "backyard" ? "bg-[url(/images/banner-backyard.png)]" : ""} ${activeTab === "internet" ? "bg-[url(/images/banner-internet.png)]" : ""} `}
+      className={`mt-10 w-full bg-cover ${activeTab === "sun" ? "md:bg-[url(/images/banner-sun.png)]" : ""} ${activeTab === "pet" ? "md:bg-[url(/images/banner-pet.png)]" : ""} ${activeTab === "bus" ? "md:bg-[url(/images/banner-bus.png)]" : ""} ${activeTab === "balcony" ? "md:bg-[url(/images/banner-balcony.png)]" : ""} ${activeTab === "backyard" ? "md:bg-[url(/images/banner-backyard.png)]" : ""} ${activeTab === "internet" ? "md:bg-[url(/images/banner-internet.png)]" : ""} `}
     >
-      <div className="container mx-auto grid w-full grid-cols-2 py-[72px]">
-        <div className="max-w-lg justify-self-start rounded-2xl bg-white shadow-lg">
+      <div className="container mx-auto w-full md:grid md:grid-cols-2 md:py-[72px]">
+        <div className="justify-self-start bg-white md:max-w-lg md:rounded-2xl md:shadow-lg">
           <nav className="w-full border-b-[1px] border-[#E1E5E9]">
             <Slider {...settings}>
               <div className="!flex justify-center">
@@ -146,106 +157,172 @@ const Filters = () => {
             </Slider>
           </nav>
           {activeTab === "sun" && (
-            <div className="flex min-h-[359px] flex-col items-start gap-4 p-10">
-              <h3 className="max-w-[13ch] text-[2.125rem] font-bold text-[#393B3D]">
-                Sol que ilumina as suas manhãs
-              </h3>
-              <p className="text-[#808587]">
-                Busque imóveis que pegam Sol durante a manhã para que você fique
-                com a vitamina D em dia ;)
-              </p>
-              <Link
-                href="#"
-                className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
-              >
-                Buscar Imóveis
-              </Link>
-            </div>
+            <>
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+                <h3 className="max-w-[13ch] text-[2.125rem] font-bold text-[#393B3D]">
+                  Sol que ilumina as suas manhãs
+                </h3>
+                <p className="text-[#808587]">
+                  Busque imóveis que pegam Sol durante a manhã para que você
+                  fique com a vitamina D em dia ;)
+                </p>
+                <Link
+                  href="#"
+                  className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+                >
+                  Buscar Imóveis
+                </Link>
+              </div>
+              {isMobile && (
+                <Image
+                  src="/images/banner-sun.png"
+                  alt="Mulher sentada tomando banho de sol"
+                  width={375}
+                  height={208}
+                  className="h-[13rem] w-full max-w-none object-cover"
+                />
+              )}
+            </>
           )}
           {activeTab === "pet" && (
-            <div className="flex min-h-[359px] flex-col items-start gap-4 p-10">
-              <h3 className="max-w-[13ch] text-[2.125rem] font-bold text-[#393B3D]">
-                Imóveis que aceitam pets
-              </h3>
-              <p className="text-[#808587]">
-                perspiciatis unde omnis iste natus erron sit voluptatem
-                accusanti sutan etsi sinmos.
-              </p>
-              <Link
-                href="#"
-                className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
-              >
-                Buscar Imóveis
-              </Link>
-            </div>
+            <>
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+                <h3 className="max-w-[13ch] text-[2.125rem] font-bold text-[#393B3D]">
+                  Imóveis que aceitam pets
+                </h3>
+                <p className="text-[#808587]">
+                  perspiciatis unde omnis iste natus erron sit voluptatem
+                  accusanti sutan etsi sinmos.
+                </p>
+                <Link
+                  href="#"
+                  className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+                >
+                  Buscar Imóveis
+                </Link>
+              </div>
+              {isMobile && (
+                <Image
+                  src="/images/banner-pet.png"
+                  alt="Mulher sentada acariciando cachorro da raça Golden Retriever"
+                  width={375}
+                  height={208}
+                  className="h-[13rem] w-full max-w-none object-cover object-right"
+                />
+              )}
+            </>
           )}
           {activeTab === "bus" && (
-            <div className="flex min-h-[359px] flex-col items-start gap-4 p-10">
-              <h3 className="max-w-[16ch] text-[2.125rem] font-bold text-[#393B3D]">
-                Imóveis com ponto de ônibus perto
-              </h3>
-              <p className="text-[#808587]">
-                perspiciatis unde omnis iste natus erron sit voluptatem
-                accusanti sutan etsi sinmos.
-              </p>
-              <Link
-                href="#"
-                className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
-              >
-                Buscar Imóveis
-              </Link>
-            </div>
+            <>
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+                <h3 className="max-w-[16ch] text-[2.125rem] font-bold text-[#393B3D]">
+                  Imóveis com ponto de ônibus perto
+                </h3>
+                <p className="text-[#808587]">
+                  perspiciatis unde omnis iste natus erron sit voluptatem
+                  accusanti sutan etsi sinmos.
+                </p>
+                <Link
+                  href="#"
+                  className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+                >
+                  Buscar Imóveis
+                </Link>
+              </div>
+              {isMobile && (
+                <Image
+                  src="/images/banner-bus.png"
+                  alt="Duas mulheres em pé no ônibus olhando em conjunto para um celular"
+                  width={375}
+                  height={208}
+                  className="h-[13rem] w-full max-w-none object-cover object-center"
+                />
+              )}
+            </>
           )}
           {activeTab === "balcony" && (
-            <div className="flex min-h-[359px] flex-col items-start gap-4 p-10">
-              <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
-                Imóveis com Varanda
-              </h3>
-              <p className="text-[#808587]">
-                perspiciatis unde omnis iste natus erron sit voluptatem
-                accusanti sutan etsi sinmos.
-              </p>
-              <Link
-                href="#"
-                className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
-              >
-                Buscar Imóveis
-              </Link>
-            </div>
+            <>
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+                <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
+                  Imóveis com Varanda
+                </h3>
+                <p className="text-[#808587]">
+                  perspiciatis unde omnis iste natus erron sit voluptatem
+                  accusanti sutan etsi sinmos.
+                </p>
+                <Link
+                  href="#"
+                  className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+                >
+                  Buscar Imóveis
+                </Link>
+              </div>
+              {isMobile && (
+                <Image
+                  src="/images/banner-balcony.png"
+                  alt="Mulher relaxando em varanda"
+                  width={375}
+                  height={208}
+                  className="h-[13rem] w-full max-w-none object-cover object-right"
+                />
+              )}
+            </>
           )}
           {activeTab === "backyard" && (
-            <div className="flex min-h-[359px] flex-col items-start gap-4 p-10">
-              <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
-                Imóveis com Quintal
-              </h3>
-              <p className="text-[#808587]">
-                perspiciatis unde omnis iste natus erron sit voluptatem
-                accusanti sutan etsi sinmos.
-              </p>
-              <Link
-                href="#"
-                className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
-              >
-                Buscar Imóveis
-              </Link>
-            </div>
+            <>
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+                <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
+                  Imóveis com Quintal
+                </h3>
+                <p className="text-[#808587]">
+                  perspiciatis unde omnis iste natus erron sit voluptatem
+                  accusanti sutan etsi sinmos.
+                </p>
+                <Link
+                  href="#"
+                  className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+                >
+                  Buscar Imóveis
+                </Link>
+              </div>
+              {isMobile && (
+                <Image
+                  src="/images/banner-backyard.png"
+                  alt="Criança brincando no quintal com cachorro"
+                  width={375}
+                  height={208}
+                  className="h-[13rem] w-full max-w-none object-cover object-center"
+                />
+              )}
+            </>
           )}
           {activeTab === "internet" && (
-            <div className="flex min-h-[359px] flex-col items-start gap-4 p-10">
-              <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
-                Imóveis com Boa Internet
-              </h3>
-              <p className="text-[#808587]">
-                perspiciatis unde omnis iste natus erron sit voluptatem
-                accusanti sutan etsi sinmos.
-              </p>
-              <Link
-                href="#"
-                className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
-              >
-                Buscar Imóveis
-              </Link>
-            </div>
+            <>
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+                <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
+                  Imóveis com Boa Internet
+                </h3>
+                <p className="text-[#808587]">
+                  perspiciatis unde omnis iste natus erron sit voluptatem
+                  accusanti sutan etsi sinmos.
+                </p>
+                <Link
+                  href="#"
+                  className="mb-2 mt-4 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+                >
+                  Buscar Imóveis
+                </Link>
+              </div>
+              {isMobile && (
+                <Image
+                  src="/images/banner-internet.png"
+                  alt="Homem e mulher sentados em um sofá mexendo em celular"
+                  width={375}
+                  height={208}
+                  className="h-[13rem] w-full max-w-none object-cover object-right"
+                />
+              )}
+            </>
           )}
         </div>
       </div>

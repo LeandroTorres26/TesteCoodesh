@@ -2,26 +2,33 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-const Reasons = () => {
+interface Props {
+  isMobile: boolean;
+}
+
+const Blog: React.FC<Props> = ({ isMobile }) => {
   return (
     <section className="mt-24 w-full">
       <div className="container mx-auto">
-        <div className="flex items-end justify-between">
-          <h2 className="text-[2.125rem] font-bold text-[#393B3D]">
+        <div className="flex flex-col justify-between gap-4 px-4 md:flex-row md:items-end md:gap-0 md:px-0">
+          <h2 className="text-xl font-bold text-[#393B3D] md:text-[2.125rem]">
             Para compradores, vendedores ou curiosos {":)"}
           </h2>
-          <Link href="#" className="mb-1 font-bold text-[#4E5254]">
-            Ver mais no Blog{" "}
+          <Link
+            href="#"
+            className="mb-1 text-[#2362AF] md:font-bold md:text-[#4E5254]"
+          >
+            Ver mais no Blog
             <Image
-              src="/right-arrow.svg"
+              src={isMobile ? "/external-link.svg" : "/right-arrow.svg"}
               alt=""
               width={14}
               height={12}
-              className="inline-block"
+              className="ml-1 inline-block"
             />
           </Link>
         </div>
-        <ul className="mt-12 grid grid-cols-3 gap-12">
+        <ul className="mt-12 flex flex-col gap-12 px-4 md:grid md:grid-cols-3 md:px-0">
           <li>
             <Link href="#" className="flex flex-col gap-4">
               <Image
@@ -110,4 +117,4 @@ const Reasons = () => {
   );
 };
 
-export default Reasons;
+export default Blog;

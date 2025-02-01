@@ -45,8 +45,10 @@ export default {
         "3/4": "3/4",
       },
       backgroundImage: {
-        "image-gradient":
+        "image-gradient-desktop":
           "linear-gradient(90deg, rgba(0,0,0, .6) 0%, transparent 45%), url('/images/banner-portugal-desktop.png')",
+        "image-gradient-mobile":
+          "linear-gradient(100deg, rgba(0,0,0, .6) 0%, transparent 100%), url('/images/banner-portugal-mobile.png')",
         "white-to-gray":
           "linear-gradient(90deg, rgba(255,255,255, 1), rgba(237, 241, 244, 1) 30%)",
         "gray-to-white":

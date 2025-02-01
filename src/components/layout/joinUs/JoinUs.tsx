@@ -2,15 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-const JoinUs = () => {
+interface Props {
+  isMobile: boolean;
+}
+
+const JoinUs: React.FC<Props> = ({ isMobile }) => {
   return (
-    <section className="mt-24 w-full bg-gray-to-white pb-32">
-      <div className="container mx-auto grid grid-cols-[auto_1fr] justify-items-start overflow-hidden rounded-2xl">
-        <div className="grid grid-cols-[auto_1fr] items-center justify-items-start gap-6 bg-[#1C2A39] p-16 text-white">
-          <span className="rounded-[1.1875rem] border border-orange-600 px-4 py-1">
+    <section className="mt-24 w-full bg-white md:pb-32">
+      <div className="container mx-auto justify-items-start overflow-hidden md:grid md:grid-cols-[auto_1fr] md:rounded-2xl">
+        <div className="flex flex-col items-start justify-items-start gap-6 bg-[#1C2A39] px-4 pb-4 pt-12 text-white md:grid md:grid-cols-[auto_1fr] md:items-center md:p-16">
+          <span className="rounded-[1.1875rem] border border-orange-600 px-4 py-1 text-sm">
             Para Empresas
           </span>
-          <h2 className="col-span-2 text-[2.125rem] font-bold">
+          <h2 className="col-span-2 text-2xl font-bold md:text-[2.125rem]">
             Faça parte da Netimóveis
           </h2>
           <p className="col-span-2 max-w-[47ch] text-xl text-[#C0C7CA]">
@@ -23,12 +27,12 @@ const JoinUs = () => {
           >
             Mais Sobre se Associar
           </Link>
-          <Link href="#" className="border-b border-[#A1A7AA]">
+          <Link href="#" className="border-b border-[#A1A7AA] text-sm">
             Conheça Nossos Produtos
           </Link>
         </div>
         <Image
-          src="/images/puzzle.png"
+          src={isMobile ? "/images/puzzle-mobile.png" : "/images/puzzle.png"}
           alt="Mão encaixando a ultima peça de um 'quebra-cabeça'"
           width={604}
           height={352}

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.scrollbar-hidden {
+  @apply overflow-x-auto;
+  scrollbar-width: none;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -41,6 +46,13 @@ body {
   transition: 300ms linear;
 }
 
+@media (max-width: 640px) {
+  :is(#adsCarousel, #statesCarousel) .slick-list {
+    overflow: visible;
+  }
+}
+
+/* Remove as setas padrões dos inputs de número */
 /* Chrome, Safari, Edge */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -53,7 +65,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* Dots */
+/* Estilização dos Dots separada para não precisar usar todo o css do react-slick */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }

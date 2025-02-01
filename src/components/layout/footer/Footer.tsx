@@ -5,36 +5,36 @@ import React, { useState } from "react";
 const Footer = () => {
   const [activeTab, setActiveTab] = useState("tipos");
   return (
-    <footer className="">
-      <div className="w-full bg-white p-10">
-        <div className="container mx-auto">
-          <nav className="w-full border-b-[1px] border-[#E1E5E9]">
+    <footer className="pt-12">
+      <div className="w-full bg-white md:p-10">
+        <div className="container mx-auto px-4">
+          <nav className="scrollbar-hidden w-full overflow-x-auto border-b-[1px] border-[#E1E5E9]">
             <ul className="flex">
               <li
-                className={`cursor-pointer p-4 hover:text-[#393B3D] ${
+                className={`cursor-pointer whitespace-nowrap px-4 py-4 font-semibold hover:text-[#393B3D] ${
                   activeTab === "tipos"
-                    ? "border-b-2 border-orange-500 text-[#393B3D]"
-                    : "text-[#808587]"
+                    ? "border-b-2 border-orange-500 text-orange-500"
+                    : "text-[#48617E] md:text-[#808587]"
                 }`}
                 onClick={() => setActiveTab("tipos")}
               >
                 Tipos de Propriedades
               </li>
               <li
-                className={`cursor-pointer p-4 hover:text-[#393B3D] ${
+                className={`cursor-pointer whitespace-nowrap px-4 py-4 font-semibold hover:text-[#393B3D] ${
                   activeTab === "venda"
-                    ? "border-b-2 border-orange-500 text-[#393B3D]"
-                    : "text-[#808587]"
+                    ? "border-b-2 border-orange-500 text-orange-500"
+                    : "text-[#48617E] md:text-[#808587]"
                 }`}
                 onClick={() => setActiveTab("venda")}
               >
                 Populares para Venda
               </li>
               <li
-                className={`cursor-pointer p-4 hover:text-[#393B3D] ${
+                className={`cursor-pointer whitespace-nowrap px-4 py-4 font-semibold hover:text-[#393B3D] ${
                   activeTab === "aluguel"
-                    ? "border-b-2 border-orange-500 text-[#393B3D]"
-                    : "text-[#808587]"
+                    ? "border-b-2 border-orange-500 text-orange-500"
+                    : "text-[#48617E] md:text-[#808587]"
                 }`}
                 onClick={() => setActiveTab("aluguel")}
               >
@@ -43,7 +43,7 @@ const Footer = () => {
             </ul>
           </nav>
           {activeTab === "tipos" && (
-            <div className="grid grid-cols-4 gap-10 py-10">
+            <div className="flex flex-wrap justify-between gap-10 py-10 md:grid md:grid-cols-4">
               <ul className="flex flex-col gap-3 text-sm text-[#555555]">
                 <li>
                   <h3 className="text-base font-bold text-[#555555]">Alugar</h3>
@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
           )}
           {activeTab === "venda" && (
-            <div className="grid grid-cols-4 gap-10 py-10">
+            <div className="flex flex-wrap justify-between gap-10 py-10 md:grid md:grid-cols-4">
               <ul className="flex flex-col gap-3 text-sm text-[#555555]">
                 <li>
                   <h3 className="text-base font-bold text-[#555555]">
@@ -161,7 +161,7 @@ const Footer = () => {
             </div>
           )}
           {activeTab === "aluguel" && (
-            <div className="grid grid-cols-4 gap-10 py-10">
+            <div className="flex flex-wrap justify-between gap-10 py-10 md:grid md:grid-cols-4">
               <ul className="flex flex-col gap-3 text-sm text-[#555555]">
                 <li>
                   <h3 className="text-base font-bold text-[#555555]">Alugar</h3>
@@ -223,7 +223,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#EDF1F4]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-4 gap-10 py-10">
+          <div className="flex flex-col gap-10 px-4 py-10 md:grid md:grid-cols-4 md:px-0">
             <ul className="flex flex-col gap-3 text-sm text-[#555555]">
               <li>
                 <h3 className="text-base font-bold text-[#063D7E]">
@@ -326,8 +326,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-orange-500 px-6 py-3">
-        <div className="container mx-auto flex justify-between">
+      <div className="bg-orange-500 px-6 pb-6 pt-3 md:pb-3">
+        <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
           <Image
             src="/logo-white.svg"
             alt="Netimóveis"
@@ -335,29 +335,31 @@ const Footer = () => {
             height={42}
             className="max-w-none"
           />
-          <div className="grid grid-cols-4 items-center justify-items-center text-white">
-            <small className="col-span-4 !text-xs">
+          <div className="grid grid-cols-5 items-center justify-items-center gap-y-2 text-center text-white md:grid-cols-4 md:gap-y-0 md:text-start">
+            <small className="col-span-5 !text-xs md:col-span-4">
               © Copyright 2021 Netimóveis Brasil SA. Todos os direitos
               reservados.
             </small>
-            <small>
+            <small className="col-span-3 md:col-auto">
               <Link href="#" className="text-xs">
                 Política de privacidade
               </Link>
             </small>
-            <small>
+            <small className="col-span-2 md:col-auto">
               <Link href="#" className="text-xs">
                 Termos de uso
               </Link>
             </small>
-            <small>
+            <small className="col-span-2 md:col-auto">
               <Link href="#" className="text-xs">
                 LGPD
               </Link>
             </small>
-            <small className="text-xs">Versão: 25/10/2021</small>
+            <small className="col-span-3 text-xs md:col-auto">
+              Versão: 25/10/2021
+            </small>
           </div>
-          <ul className="flex items-center justify-between gap-8">
+          <ul className="mt-3 flex items-center justify-between gap-8 md:mt-0">
             <li>
               <Link href="#">
                 <Image

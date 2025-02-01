@@ -11,7 +11,7 @@ const States = () => {
 
     return (
       <div
-        className={`${className} absolute right-5 top-[-3.5rem] flex items-center justify-center ${
+        className={`${className} absolute right-0 top-[-4rem] flex items-center justify-center md:right-5 md:top-[-3.5rem] ${
           disabled ? "!cursor-default !opacity-50" : "cursor-pointer"
         }`}
         style={{ ...style, display: "block" }}
@@ -33,7 +33,7 @@ const States = () => {
 
     return (
       <div
-        className={`${className} absolute right-[4.5rem] top-[-3.5rem] flex rotate-180 items-center justify-center ${
+        className={`${className} absolute right-[3.2rem] top-[-4rem] flex rotate-180 items-center justify-center md:right-[4.5rem] md:top-[-3.5rem] ${
           disabled ? "!cursor-default !opacity-50" : "cursor-pointer"
         }`}
         style={{ ...style, display: "block" }}
@@ -53,6 +53,14 @@ const States = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 748,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const cities = [
@@ -191,9 +199,9 @@ const States = () => {
   ];
 
   return (
-    <section className="w-full py-28">
-      <div className="container mx-auto flex flex-col gap-28">
-        <div className="grid grid-cols-5 overflow-hidden rounded-2xl border border-[#D0D5D8]">
+    <section id="statesCarousel" className="w-full py-10 md:py-28">
+      <div className="container mx-auto flex flex-col gap-20 md:gap-28">
+        <div className="flex flex-col-reverse gap-10 overflow-hidden md:grid md:grid-cols-5 md:gap-0 md:rounded-2xl md:border md:border-[#D0D5D8]">
           <Image
             src="/images/advertise.png"
             width={822}
@@ -201,17 +209,17 @@ const States = () => {
             alt="2 pessoas usando o Net Imóveis no celular."
             className="col-span-3 h-full w-full object-cover"
           />
-          <div className="col-span-2 flex flex-col items-start gap-4 p-8">
+          <div className="col-span-2 flex flex-col items-start gap-4 px-4 pt-8 md:p-8">
             <h3 className="font-bold text-orange-500">
               Quer Vender ou Alugar?
             </h3>
-            <h4 className="max-w-[19ch] text-[2.125rem] font-bold text-[#393B3D]">
+            <h4 className="max-w-[19ch] text-[2.125rem] font-bold text-[#4E5254] md:text-[#393B3D]">
               Anuncie grátis
               <br /> para mais de 100 mil pessoas todos os dias.
             </h4>
             <Link
               href="#"
-              className="mb-2 mt-20 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white"
+              className="mb-2 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 font-semibold text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white md:mt-20"
             >
               Anunciar Imóvel
             </Link>
@@ -227,13 +235,13 @@ const States = () => {
             </Link>
           </div>
         </div>
-        <div>
-          <h2 className="mb-10 text-[2.125rem] font-bold text-[#393B3D]">
+        <div className="px-4">
+          <h2 className="mb-5 max-w-[25ch] text-base font-bold text-[#393B3D] md:mb-10 md:max-w-none md:text-[2.125rem]">
             Prontos para te Receber em mais de 10 estados
           </h2>
-          <Slider {...settings}>
+          <Slider {...settings} className="pr-7 md:pr-0">
             {cities.map((location, index) => (
-              <div key={index}>
+              <div key={index} className="pr-4">
                 <div className="flex flex-col">
                   <figure className="relative">
                     <Image
@@ -241,7 +249,7 @@ const States = () => {
                       alt="Foto da Igreja São Francisco de Assis da Pampulha, em Belo Horizonte"
                       width={294}
                       height={192}
-                      className="rounded-2xl brightness-[80%]"
+                      className="w-full rounded-2xl brightness-[80%]"
                     />
                     <figcaption className="absolute bottom-0 p-4 text-2xl font-bold text-white">
                       {location.state}
@@ -250,7 +258,7 @@ const States = () => {
                   <ul className="ml-2 mt-4 flex flex-col gap-1 text-sm text-[#808587]">
                     {location.items.map((item, index) => (
                       <li key={index}>
-                        <span className="text-orange-500">●</span>
+                        <span className="mr-1 text-orange-500">●</span>
                         {item}
                       </li>
                     ))}
@@ -260,16 +268,18 @@ const States = () => {
             ))}
           </Slider>
         </div>
-        <div className="flex w-full items-center justify-between rounded-2xl bg-image-gradient bg-cover bg-no-repeat px-14 py-8">
-          <h3 className="max-w-[21ch] text-[2.125rem] font-bold text-white">
-            Encontre a oportunidade Perfeita em Portugal
-          </h3>
-          <Link
-            href=""
-            className="rounded-[0.625rem] bg-white px-4 py-3 font-semibold text-orange-500"
-          >
-            Ver imóveis em Portugal
-          </Link>
+        <div className="px-4 md:px-0">
+          <div className="flex w-full flex-col items-start justify-between gap-8 rounded-2xl bg-image-gradient-mobile bg-cover bg-no-repeat px-4 py-8 md:flex-row md:items-center md:bg-image-gradient-desktop md:px-14">
+            <h3 className="max-w-[21ch] text-2xl font-bold text-white md:text-[2.125rem]">
+              Encontre a oportunidade Perfeita em Portugal
+            </h3>
+            <Link
+              href=""
+              className="rounded-[0.625rem] bg-white px-4 py-3 font-semibold text-orange-500"
+            >
+              Ver imóveis em Portugal
+            </Link>
+          </div>
         </div>
       </div>
     </section>

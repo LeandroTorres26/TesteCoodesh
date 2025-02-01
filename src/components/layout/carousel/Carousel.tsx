@@ -78,12 +78,22 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 748,
+        settings: {
+          dots: false,
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <section className="mb-14 mt-16 w-full">
-      <div className="container relative mx-auto">
-        <h2 className="text-2xl">
+    <section id="adsCarousel" className="mb-14 mt-16 w-full">
+      <div className="container relative mx-auto pl-4 md:pl-0">
+        <h2 className="text-xl font-bold text-[#3A3A3A] md:text-2xl md:text-[#393B3D]">
           Novos Anúncios em
           <div className="relative ml-2 inline-block">
             <button className="text-orange-500" onClick={toggleDropdown}>
@@ -113,7 +123,7 @@ const Carousel = () => {
         </h2>
         <Link
           href="#"
-          className="text-[#2362AF] visited:text-purple-700 hover:brightness-75"
+          className="mt-3 block text-[#2362AF] hover:brightness-75"
         >
           Ver todos os imóveis{" "}
           <Image
@@ -124,7 +134,10 @@ const Carousel = () => {
             className="inline-block"
           />
         </Link>
-        <Slider {...settings} className="mt-4 grid grid-cols-4 gap-6">
+        <Slider
+          {...settings}
+          className="mt-4 grid grid-cols-4 gap-6 pr-10 md:pr-0"
+        >
           {flats
             .filter((flat) => flat.City === selectedPlace)
             .map((flat, index) => (
