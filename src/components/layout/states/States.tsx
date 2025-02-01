@@ -11,7 +11,7 @@ const States = () => {
 
     return (
       <div
-        className={`${className} absolute right-0 top-[-4rem] flex items-center justify-center md:right-5 md:top-[-3.5rem] ${
+        className={`${className} absolute right-0 top-[-4rem] flex items-center justify-center lg:right-5 lg:top-[-3.5rem] ${
           disabled ? "!cursor-default !opacity-50" : "cursor-pointer"
         }`}
         style={{ ...style, display: "block" }}
@@ -33,7 +33,7 @@ const States = () => {
 
     return (
       <div
-        className={`${className} absolute right-[3.2rem] top-[-4rem] flex rotate-180 items-center justify-center md:right-[4.5rem] md:top-[-3.5rem] ${
+        className={`${className} absolute right-[3.2rem] top-[-4rem] flex rotate-180 items-center justify-center lg:right-[4.5rem] lg:top-[-3.5rem] ${
           disabled ? "!cursor-default !opacity-50" : "cursor-pointer"
         }`}
         style={{ ...style, display: "block" }}
@@ -55,7 +55,7 @@ const States = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 748,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
         },
@@ -116,7 +116,7 @@ const States = () => {
       image: "/images/DF.png",
       alt: "Foto do Palácio do Congresso Nacional, em Brasília, Distrito Federal",
       city: "Brasília",
-      state: "Rio de Janeiro",
+      state: "Distrito Federal",
       items: [
         "Casas à venda em Brasília",
         "Apto. à venda em Brasília",
@@ -151,8 +151,8 @@ const States = () => {
     {
       image: "/images/PB.png",
       alt: "Foto da Praia de Tambaú, em João Pessoa, Paraíba",
-      city: "Florianópolis",
-      state: "Santa Catarina",
+      city: "João Pessoa",
+      state: "Paraíba",
       items: [
         "Casas à venda em João Pessoa",
         "Apto. à venda em João Pessoa",
@@ -163,8 +163,8 @@ const States = () => {
     {
       image: "/images/BA.png",
       alt: "Foto do Farol da Barra, em Salvador, Bahia",
-      city: "Florianópolis",
-      state: "Santa Catarina",
+      city: "Salvador",
+      state: "Bahia",
       items: [
         "Casas à venda em Salvador",
         "Apto. à venda em Salvador",
@@ -175,8 +175,8 @@ const States = () => {
     {
       image: "/images/CE.png",
       alt: "Foto da Praia de Iracema, em Fortaleza, Ceará",
-      city: "Florianópolis",
-      state: "Santa Catarina",
+      city: "Fortaleza",
+      state: "Ceará",
       items: [
         "Casas à venda em Fortaleza",
         "Apto. à venda em Fortaleza",
@@ -199,9 +199,9 @@ const States = () => {
   ];
 
   return (
-    <section id="statesCarousel" className="w-full py-10 md:py-28">
-      <div className="container mx-auto flex flex-col gap-20 md:gap-28">
-        <div className="flex flex-col-reverse gap-10 overflow-hidden md:grid md:grid-cols-5 md:gap-0 md:rounded-2xl md:border md:border-[#D0D5D8]">
+    <section id="statesCarousel" className="w-full py-10 lg:py-28">
+      <div className="container mx-auto flex flex-col gap-20 lg:gap-28">
+        <div className="flex flex-col-reverse gap-10 overflow-hidden lg:grid lg:grid-cols-5 lg:gap-0 lg:rounded-2xl lg:border lg:border-[#D0D5D8]">
           <Image
             src="/images/advertise.png"
             width={822}
@@ -209,17 +209,17 @@ const States = () => {
             alt="2 pessoas usando o Net Imóveis no celular."
             className="col-span-3 h-full w-full object-cover"
           />
-          <div className="col-span-2 flex flex-col items-start gap-4 px-4 pt-8 md:p-8">
+          <div className="col-span-2 flex flex-col items-start gap-4 px-4 pt-8 lg:p-8">
             <h3 className="font-bold text-orange-500">
               Quer Vender ou Alugar?
             </h3>
-            <h4 className="max-w-[19ch] text-[2.125rem] font-bold text-[#4E5254] md:text-[#393B3D]">
+            <h4 className="max-w-[19ch] text-[2.125rem] font-bold text-[#4E5254] lg:text-[#393B3D]">
               Anuncie grátis
               <br /> para mais de 100 mil pessoas todos os dias.
             </h4>
             <Link
               href="#"
-              className="mb-2 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 font-semibold text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white md:mt-20"
+              className="mb-2 rounded-[10px] border border-purple-700 bg-transparent px-4 py-3 font-semibold text-purple-700 duration-100 ease-linear hover:bg-purple-700 hover:text-white lg:mt-20"
             >
               Anunciar Imóvel
             </Link>
@@ -236,10 +236,10 @@ const States = () => {
           </div>
         </div>
         <div className="px-4">
-          <h2 className="mb-5 max-w-[25ch] text-base font-bold text-[#393B3D] md:mb-10 md:max-w-none md:text-[2.125rem]">
+          <h2 className="mb-5 max-w-[25ch] text-base font-bold text-[#393B3D] lg:mb-10 lg:max-w-none lg:text-[2.125rem]">
             Prontos para te Receber em mais de 10 estados
           </h2>
-          <Slider {...settings} className="pr-7 md:pr-0">
+          <Slider {...settings} className="pr-7 lg:pr-0">
             {cities.map((location, index) => (
               <div key={index} className="pr-4">
                 <div className="flex flex-col">
@@ -268,9 +268,9 @@ const States = () => {
             ))}
           </Slider>
         </div>
-        <div className="px-4 md:px-0">
-          <div className="flex w-full flex-col items-start justify-between gap-8 rounded-2xl bg-image-gradient-mobile bg-cover bg-no-repeat px-4 py-8 md:flex-row md:items-center md:bg-image-gradient-desktop md:px-14">
-            <h3 className="max-w-[21ch] text-2xl font-bold text-white md:text-[2.125rem]">
+        <div className="px-4 lg:px-0">
+          <div className="flex w-full flex-col items-start justify-between gap-8 rounded-2xl bg-image-gradient-mobile bg-cover bg-no-repeat px-4 py-8 lg:flex-row lg:items-center lg:bg-image-gradient-desktop lg:px-14">
+            <h3 className="max-w-[21ch] text-2xl font-bold text-white lg:text-[2.125rem]">
               Encontre a oportunidade Perfeita em Portugal
             </h3>
             <Link

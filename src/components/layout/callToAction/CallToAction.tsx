@@ -1,8 +1,18 @@
 import Image from "next/image";
 import React, { useState, useCallback, useRef, useEffect } from "react";
+import addresses from "../../../../assets/addresses.json";
 
 interface Props {
   isMobile: boolean;
+}
+
+interface Address {
+  street: string;
+  neighborhood_city: string;
+  state: {
+    name: string;
+    acronym: string;
+  };
 }
 
 const CallToAction: React.FC<Props> = ({ isMobile }) => {
@@ -45,28 +55,22 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
     [],
   );
 
-  const addresses = [
-    {
-      street: "Av. José Faria da Rocha",
-      neighborhood_city: "Eldorado, Contagem - MG",
-    },
-    {
-      street: "Rua José Faria de Barros",
-      neighborhood_city: "Parque imperial, Salto - MG",
-    },
-    {
-      street: "Rua José Faria de Almeida",
-      neighborhood_city: "Jardim das Palmeiras, Boituva - MG",
-    },
-    {
-      street: "Rua José Faria de Carvalho",
-      neighborhood_city: "Exemplo de texto sobresalente, Pouso Alegre - MG",
-    },
-    {
-      street: "Avenida José Maria de Faria",
-      neighborhood_city: "Lapa de Baixo, São Paulo - SP",
-    },
-  ];
+  const filteredAddresses: Address[] =
+    searchLocation.trim() === ""
+      ? []
+      : addresses
+          .filter((address: Address) => {
+            const searchTerm = searchLocation.trim().toLowerCase();
+            const { street, neighborhood_city, state } = address;
+
+            return (
+              street.toLowerCase().includes(searchTerm) ||
+              neighborhood_city.toLowerCase().includes(searchTerm) ||
+              state.name.toLowerCase().includes(searchTerm) ||
+              state.acronym.toLowerCase().includes(searchTerm)
+            );
+          })
+          .slice(0, 5);
 
   // Input de número de quartos
   const [roomFocus, setRoomFocus] = useState(false);
@@ -172,32 +176,32 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
   }, []);
 
   return (
-    <section className="relative w-full bg-cover bg-right bg-no-repeat md:grid md:h-[40rem] md:grid-rows-2 md:place-items-center md:items-center md:justify-items-center md:bg-[url(/images/main-banner-desktop.png)] md:py-4">
+    <section className="relative w-full bg-cover bg-right bg-no-repeat lg:grid lg:h-[40rem] lg:grid-rows-2 lg:place-items-center lg:items-center lg:justify-items-center lg:bg-[url(/images/main-banner-desktop.png)] lg:py-4">
       <div className="flex flex-col items-center justify-center">
-        <div className="flex aspect-video w-full items-center justify-start bg-[url(/images/main-banner-mobile.png)] bg-cover bg-[66%] py-10 pl-16 md:block md:aspect-auto md:w-auto md:bg-none md:p-0">
+        <div className="flex aspect-video w-full items-center justify-start bg-[url(/images/main-banner-mobile.png)] bg-cover bg-[66%] py-10 pl-16 lg:block lg:aspect-auto lg:w-auto lg:bg-none lg:p-0">
           <h2 className="text-[2.125rem] font-bold text-white">
             Vende.
-            <br className="md:hidden" /> Aluga.
-            <br className="md:hidden" /> Conecta.
+            <br className="lg:hidden" /> Aluga.
+            <br className="lg:hidden" /> Conecta.
           </h2>
         </div>
         <div
           id="searchContainer"
-          className={`grid w-full gap-y-4 bg-white pt-8 transition-all duration-700 ease-in-out md:mt-8 md:h-[4.875rem] md:w-auto md:grid-cols-5 md:rounded-full md:pt-0 ${
+          className={`grid w-full gap-y-4 bg-white pt-8 transition-all duration-700 ease-in-out lg:mt-8 lg:h-[4.875rem] lg:w-auto lg:grid-cols-5 lg:rounded-full lg:pt-0 ${
             locationFocus || showLocationResults || showRoomResults
-              ? "md:max-w-[62.5rem]"
-              : "md:max-w-[48.125rem]"
+              ? "lg:max-w-[62.5rem]"
+              : "lg:max-w-[48.125rem]"
           }`}
         >
           <div
-            className={`relative flex flex-col justify-center rounded-full bg-white px-4 duration-100 ease-linear md:col-span-3 md:pl-8 ${
+            className={`relative flex flex-col justify-center rounded-full bg-white px-4 duration-100 ease-linear lg:col-span-3 lg:pl-8 ${
               locationFocus
-                ? "z-[1] md:shadow-[10px_4px_13px_2px_rgba(0,_0,_0,_0.1)]"
-                : "md:hover:bg-[#EDF1F4]"
+                ? "z-[1] lg:shadow-[10px_4px_13px_2px_rgba(0,_0,_0,_0.1)]"
+                : "lg:hover:bg-[#EDF1F4]"
             }`}
             onClick={() => locationInputRef.current?.focus()}
           >
-            <div className="flex flex-col gap-y-1 rounded-[10px] border border-[#E1E5E9] px-6 py-4 md:rounded-none md:border-none md:p-0">
+            <div className="flex flex-col gap-y-1 rounded-[10px] border border-[#E1E5E9] px-6 py-4 lg:rounded-none lg:border-none lg:p-0">
               <label
                 htmlFor="locationInput"
                 className="flex items-center text-sm font-bold"
@@ -226,13 +230,13 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
             {showLocationResults && (
               <div
                 ref={locationDropdownRef}
-                className="absolute left-4 right-4 top-[90px] z-40 self-start rounded-2xl bg-white shadow-lg md:left-auto md:right-auto md:top-[5.375rem] md:max-w-[18.875rem]"
+                className="absolute left-4 right-4 top-[90px] z-40 self-start rounded-2xl bg-white shadow-lg lg:left-auto lg:right-auto lg:top-[5.375rem] lg:max-w-[18.875rem]"
               >
                 <span className="block w-full px-6 py-3 text-center text-sm text-[#A1A7AA]">
                   Busque por cidade, região, bairro ou código
                 </span>
                 <ul>
-                  {addresses.map((address, index) => (
+                  {filteredAddresses.map((address, index) => (
                     <li
                       key={index}
                       className="cursor-pointer p-3 hover:bg-[#F4F6F9]"
@@ -249,7 +253,7 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
                           {address.street}
                         </span>
                         <small className="col-[2/3] max-w-[30ch] text-xs text-[#4E5254]">
-                          {address.neighborhood_city}
+                          {address.neighborhood_city} - {address.state.acronym}
                         </small>
                       </address>
                     </li>
@@ -259,18 +263,18 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
             )}
           </div>
           <div
-            className={`relative flex flex-col gap-y-6 rounded-full px-4 md:col-span-2 md:grid md:grid-cols-3 md:grid-rows-2 md:items-center md:justify-center md:gap-y-0 md:pl-8 ${
+            className={`relative flex flex-col gap-y-6 rounded-full px-4 lg:col-span-2 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:items-center lg:justify-center lg:gap-y-0 lg:pl-8 ${
               locationFocus || showLocationResults || showRoomResults
-                ? "md:pr-2"
+                ? "lg:pr-2"
                 : ""
             } bg-white duration-100 ease-linear ${
               roomFocus
-                ? "z-[2] md:shadow-[-10px_4px_13px_2px_rgba(0,_0,_0,_0.1)]"
-                : "md:hover:bg-[#EDF1F4]"
+                ? "z-[2] lg:shadow-[-10px_4px_13px_2px_rgba(0,_0,_0,_0.1)]"
+                : "lg:hover:bg-[#EDF1F4]"
             }`}
             onClick={() => roomInputRef.current?.focus()}
           >
-            <div className="flex flex-col gap-y-1 rounded-[10px] border border-[#E1E5E9] px-6 py-4 md:col-span-2 md:row-span-2 md:rounded-none md:border-none md:p-0">
+            <div className="flex flex-col gap-y-1 rounded-[10px] border border-[#E1E5E9] px-6 py-4 lg:col-span-2 lg:row-span-2 lg:rounded-none lg:border-none lg:p-0">
               <label
                 htmlFor="roomsInput"
                 className="flex items-center text-sm font-bold"
@@ -304,7 +308,7 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
               />
             </div>
             <button
-              className="flex h-[58px] items-center justify-center gap-1 rounded-[10px] bg-orange-600 p-4 font-semibold text-white duration-100 ease-linear md:col-3/4 md:row-1/3 md:justify-self-end md:rounded-full md:bg-orange-500 md:font-bold md:hover:bg-orange-600"
+              className="flex h-[58px] items-center justify-center gap-1 rounded-[10px] bg-orange-600 p-4 font-semibold text-white duration-100 ease-linear lg:col-3/4 lg:row-1/3 lg:justify-self-end lg:rounded-full lg:bg-orange-500 lg:font-bold lg:hover:bg-orange-600"
               onClick={(event) => {
                 event.stopPropagation();
               }}
@@ -327,12 +331,12 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
             {showRoomResults && (
               <div
                 ref={roomDropdownRef}
-                className="absolute left-4 right-4 top-[90px] z-40 self-start rounded-2xl bg-white px-6 pb-6 pt-4 shadow-lg md:left-auto md:right-auto md:top-[5.375rem]"
+                className="absolute left-4 right-4 top-[90px] z-40 self-start rounded-2xl bg-white px-6 pb-6 pt-4 shadow-lg lg:left-auto lg:right-auto lg:top-[5.375rem]"
               >
                 <span className="block w-full pb-3 text-sm text-[#393B3D]">
                   Número de Quartos
                 </span>
-                <ul className="flex flex-wrap justify-center gap-3 border-b border-[#E1E5E9] pb-6 md:flex-nowrap md:justify-between">
+                <ul className="flex flex-wrap justify-center gap-3 border-b border-[#E1E5E9] pb-6 lg:flex-nowrap lg:justify-between">
                   <li>
                     <button
                       className={`rounded-full border px-4 py-3 text-sm font-semibold ${

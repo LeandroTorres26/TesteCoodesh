@@ -80,7 +80,7 @@ const Carousel = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 748,
+        breakpoint: 1024,
         settings: {
           dots: false,
           arrows: false,
@@ -92,8 +92,8 @@ const Carousel = () => {
 
   return (
     <section id="adsCarousel" className="mb-14 mt-16 w-full">
-      <div className="container relative mx-auto pl-4 md:pl-0">
-        <h2 className="text-xl font-bold text-[#3A3A3A] md:text-2xl md:text-[#393B3D]">
+      <div className="container relative mx-auto pl-4 lg:pl-0">
+        <h2 className="text-xl font-bold text-[#3A3A3A] lg:text-2xl lg:text-[#393B3D]">
           Novos Anúncios em
           <div className="relative ml-2 inline-block">
             <button className="text-orange-500" onClick={toggleDropdown}>
@@ -136,7 +136,7 @@ const Carousel = () => {
         </Link>
         <Slider
           {...settings}
-          className="mt-4 grid grid-cols-4 gap-6 pr-10 md:pr-0"
+          className="mt-4 grid grid-cols-4 gap-6 pr-10 lg:pr-0"
         >
           {flats
             .filter((flat) => flat.City === selectedPlace)

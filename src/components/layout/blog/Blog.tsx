@@ -10,13 +10,13 @@ const Blog: React.FC<Props> = ({ isMobile }) => {
   return (
     <section className="mt-24 w-full">
       <div className="container mx-auto">
-        <div className="flex flex-col justify-between gap-4 px-4 md:flex-row md:items-end md:gap-0 md:px-0">
-          <h2 className="text-xl font-bold text-[#393B3D] md:text-[2.125rem]">
+        <div className="flex flex-col justify-between gap-4 px-4 lg:flex-row lg:items-end lg:gap-0 lg:px-0">
+          <h2 className="text-xl font-bold text-[#393B3D] lg:text-[2.125rem]">
             Para compradores, vendedores ou curiosos {":)"}
           </h2>
           <Link
             href="#"
-            className="mb-1 text-[#2362AF] md:font-bold md:text-[#4E5254]"
+            className="mb-1 text-[#2362AF] lg:font-bold lg:text-[#4E5254]"
           >
             Ver mais no Blog
             <Image
@@ -28,7 +28,7 @@ const Blog: React.FC<Props> = ({ isMobile }) => {
             />
           </Link>
         </div>
-        <ul className="mt-12 flex flex-col gap-12 px-4 md:grid md:grid-cols-3 md:px-0">
+        <ul className="mt-12 flex flex-col gap-12 px-4 lg:grid lg:grid-cols-3 lg:px-0">
           <li>
             <Link href="#" className="flex flex-col gap-4">
               <Image

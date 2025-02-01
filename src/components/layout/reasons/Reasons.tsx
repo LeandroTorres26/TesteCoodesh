@@ -3,7 +3,7 @@ import React from "react";
 
 const Reasons = () => {
   return (
-    <section className="mt-10 w-full bg-white md:mt-0 md:grid md:grid-cols-2">
+    <section className="mt-10 w-full bg-white lg:mt-0 lg:grid lg:grid-cols-2">
       <div>
         <Image
           src="/Images/presentation.png"
@@ -13,7 +13,7 @@ const Reasons = () => {
           className="h-full w-full object-cover object-right-top"
         />
       </div>
-      <div className="ml-4 flex flex-col gap-5 bg-white-to-gray py-8 md:gap-12 md:px-28 md:py-14">
+      <div className="ml-4 flex flex-col gap-5 bg-white-to-gray py-8 lg:gap-12 lg:px-28 lg:py-14">
         <h2 className="text-2xl font-bold text-[#A1A7AA]">
           Aqui vai uma frase de efeito
         </h2>

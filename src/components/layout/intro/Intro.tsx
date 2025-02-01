@@ -9,21 +9,21 @@ interface Props {
 const Intro: React.FC<Props> = ({ isMobile }) => {
   const [activeTab, setActiveTab] = useState("alugar");
   return (
-    <section className="mt-8 w-full border-b border-[#E1E5E9] bg-gradient-to-t from-white to-[#edf1f4] md:border-none md:bg-gradient-to-r">
-      <div className="container mx-auto grid w-full px-4 py-16 md:grid-cols-2 md:py-[72px]">
+    <section className="mt-8 w-full border-b border-[#E1E5E9] bg-gradient-to-t from-white to-[#edf1f4] lg:border-none lg:bg-gradient-to-r">
+      <div className="container mx-auto grid w-full px-4 py-16 lg:grid-cols-2 lg:py-[72px]">
         <div className="flex flex-col gap-5 justify-self-start">
-          <h2 className="max-w-[16ch] text-[2.125rem] font-bold text-[#4E5254] md:text-6xl md:font-semibold">
+          <h2 className="max-w-[16ch] text-[2.125rem] font-bold text-[#4E5254] lg:text-6xl lg:font-semibold">
             Encontre um lugar que é a sua cara
           </h2>
-          <p className="text-xl text-[#808587] md:max-w-[48ch]">
+          <p className="text-xl text-[#808587] lg:max-w-[48ch]">
             A Netimóveis te oferece uma experiência ágil e segura na hora de
             comprar ou alugar seu imóvel. Seja de maneira digital ou física,
             fazemos a diferença neste momento tão importante que é decidir um
             lar.
           </p>
         </div>
-        <div className="max-w-lg justify-self-end rounded-2xl md:bg-white md:shadow-lg">
-          <nav className="hidden w-full border-b-[1px] border-[#E1E5E9] md:block">
+        <div className="max-w-lg justify-self-end rounded-2xl lg:bg-white lg:shadow-lg">
+          <nav className="hidden w-full border-b-[1px] border-[#E1E5E9] lg:block">
             <ul className="flex justify-around">
               <li
                 className={`flex max-w-[87px] cursor-pointer flex-col items-center p-4 text-center hover:text-[#393B3D] ${
@@ -61,13 +61,13 @@ const Intro: React.FC<Props> = ({ isMobile }) => {
             </ul>
           </nav>
           {(isMobile || activeTab === "alugar") && (
-            <div className="relative mt-10 flex flex-col items-start gap-4 px-6 md:mt-0 md:min-h-[359px] md:p-10">
-              <div className="absolute left-0 top-1 block h-8 w-[2px] bg-orange-600 md:hidden" />
-              <h3 className="text-[2.125rem] font-bold text-[#4E5254] md:text-[#393B3D]">
+            <div className="relative mt-10 flex flex-col items-start gap-4 px-6 lg:mt-0 lg:min-h-[359px] lg:p-10">
+              <div className="absolute left-0 top-1 block h-8 w-[2px] bg-orange-600 lg:hidden" />
+              <h3 className="text-[2.125rem] font-bold text-[#4E5254] lg:text-[#393B3D]">
                 Alugue
-                <br className="md:hidden" /> sem Complicação
+                <br className="lg:hidden" /> sem Complicação
               </h3>
-              <p className="text-[#808587] md:w-[55ch]">
+              <p className="text-[#808587] lg:w-[55ch]">
                 Alugue imóveis qualificados e sem repitição. Sed ut perspiciatis
                 unde omnis iste natus error sit.
               </p>
@@ -92,13 +92,13 @@ const Intro: React.FC<Props> = ({ isMobile }) => {
             </div>
           )}
           {(isMobile || activeTab === "comprar") && (
-            <div className="relative mt-10 flex flex-col items-start gap-4 px-6 md:mt-0 md:min-h-[359px] md:p-10">
-              <div className="absolute left-0 top-1 block h-8 w-[2px] bg-orange-600 md:hidden" />
-              <h3 className="text-[2.125rem] font-bold text-[#4E5254] md:text-[#393B3D]">
+            <div className="relative mt-10 flex flex-col items-start gap-4 px-6 lg:mt-0 lg:min-h-[359px] lg:p-10">
+              <div className="absolute left-0 top-1 block h-8 w-[2px] bg-orange-600 lg:hidden" />
+              <h3 className="text-[2.125rem] font-bold text-[#4E5254] lg:text-[#393B3D]">
                 Compre
-                <br className="md:hidden" /> com segurança
+                <br className="lg:hidden" /> com segurança
               </h3>
-              <p className="text-[#808587] md:w-[55ch]">
+              <p className="text-[#808587] lg:w-[55ch]">
                 Compre seu imóvel com segurança e agilidade. Sed ut perspiciatis
                 unde omnis iste natus error sit.
               </p>
@@ -123,13 +123,13 @@ const Intro: React.FC<Props> = ({ isMobile }) => {
             </div>
           )}
           {(isMobile || activeTab === "anunciar") && (
-            <div className="relative mt-10 flex flex-col items-start gap-4 px-6 md:mt-0 md:min-h-[359px] md:p-10">
-              <div className="absolute left-0 top-1 block h-8 w-[2px] bg-orange-600 md:hidden" />
-              <h3 className="text-[2.125rem] font-bold text-[#4E5254] md:text-[#393B3D]">
+            <div className="relative mt-10 flex flex-col items-start gap-4 px-6 lg:mt-0 lg:min-h-[359px] lg:p-10">
+              <div className="absolute left-0 top-1 block h-8 w-[2px] bg-orange-600 lg:hidden" />
+              <h3 className="text-[2.125rem] font-bold text-[#4E5254] lg:text-[#393B3D]">
                 Anuncie
-                <br className="md:hidden" /> Seu Imóvel
+                <br className="lg:hidden" /> Seu Imóvel
               </h3>
-              <p className="text-[#808587] md:w-[55ch]">
+              <p className="text-[#808587] lg:w-[55ch]">
                 Anuncie gratuitamente na maior rede de imobiliárias do Brasil.
               </p>
               <Link

@@ -29,7 +29,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           alt="Avançar Slide"
           width={40}
           height={40}
-          className="w-[1.875rem] md:w-[2.5rem]"
+          className="w-[1.875rem] lg:w-[2.5rem]"
         />
       </div>
     );
@@ -51,7 +51,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           alt="Recuar"
           width={40}
           height={40}
-          className="w-[1.875rem] md:w-[2.5rem]"
+          className="w-[1.875rem] lg:w-[2.5rem]"
         />
       </div>
     );
@@ -70,10 +70,10 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
 
   return (
     <section
-      className={`mt-10 w-full bg-cover ${activeTab === "sun" ? "md:bg-[url(/images/banner-sun.png)]" : ""} ${activeTab === "pet" ? "md:bg-[url(/images/banner-pet.png)]" : ""} ${activeTab === "bus" ? "md:bg-[url(/images/banner-bus.png)]" : ""} ${activeTab === "balcony" ? "md:bg-[url(/images/banner-balcony.png)]" : ""} ${activeTab === "backyard" ? "md:bg-[url(/images/banner-backyard.png)]" : ""} ${activeTab === "internet" ? "md:bg-[url(/images/banner-internet.png)]" : ""} `}
+      className={`mt-10 w-full bg-cover ${activeTab === "sun" ? "lg:bg-[url(/images/banner-sun.png)]" : ""} ${activeTab === "pet" ? "lg:bg-[url(/images/banner-pet.png)]" : ""} ${activeTab === "bus" ? "lg:bg-[url(/images/banner-bus.png)]" : ""} ${activeTab === "balcony" ? "lg:bg-[url(/images/banner-balcony.png)]" : ""} ${activeTab === "backyard" ? "lg:bg-[url(/images/banner-backyard.png)]" : ""} ${activeTab === "internet" ? "lg:bg-[url(/images/banner-internet.png)]" : ""} `}
     >
-      <div className="container mx-auto w-full md:grid md:grid-cols-2 md:py-[72px]">
-        <div className="justify-self-start bg-white md:max-w-lg md:rounded-2xl md:shadow-lg">
+      <div className="container mx-auto w-full lg:grid lg:grid-cols-2 lg:py-[72px]">
+        <div className="justify-self-start bg-white lg:max-w-lg lg:rounded-2xl lg:shadow-lg">
           <nav className="w-full border-b-[1px] border-[#E1E5E9]">
             <Slider {...settings}>
               <div className="!flex justify-center">
@@ -158,7 +158,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           </nav>
           {activeTab === "sun" && (
             <>
-              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 lg:min-h-[359px] lg:p-10">
                 <h3 className="max-w-[13ch] text-[2.125rem] font-bold text-[#393B3D]">
                   Sol que ilumina as suas manhãs
                 </h3>
@@ -186,7 +186,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           )}
           {activeTab === "pet" && (
             <>
-              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 lg:min-h-[359px] lg:p-10">
                 <h3 className="max-w-[13ch] text-[2.125rem] font-bold text-[#393B3D]">
                   Imóveis que aceitam pets
                 </h3>
@@ -214,7 +214,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           )}
           {activeTab === "bus" && (
             <>
-              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 lg:min-h-[359px] lg:p-10">
                 <h3 className="max-w-[16ch] text-[2.125rem] font-bold text-[#393B3D]">
                   Imóveis com ponto de ônibus perto
                 </h3>
@@ -242,7 +242,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           )}
           {activeTab === "balcony" && (
             <>
-              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 lg:min-h-[359px] lg:p-10">
                 <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
                   Imóveis com Varanda
                 </h3>
@@ -270,7 +270,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           )}
           {activeTab === "backyard" && (
             <>
-              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 lg:min-h-[359px] lg:p-10">
                 <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
                   Imóveis com Quintal
                 </h3>
@@ -298,7 +298,7 @@ const Filters: React.FC<Props> = ({ isMobile }) => {
           )}
           {activeTab === "internet" && (
             <>
-              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 md:min-h-[359px] md:p-10">
+              <div className="flex min-h-[328px] flex-col items-start gap-4 px-5 pb-5 pt-10 lg:min-h-[359px] lg:p-10">
                 <h3 className="max-w-[12ch] text-[2.125rem] font-bold text-[#393B3D]">
                   Imóveis com Boa Internet
                 </h3>
