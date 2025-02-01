@@ -1,7 +1,8 @@
 [
   {
     "street": "Av. José Faria da Rocha",
-    "neighborhood_city": "Eldorado, Contagem",
+    "neighborhood": "Eldorado",
+    "city": "Contagem",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -9,7 +10,8 @@
   },
   {
     "street": "Rua José Faria de Barros",
-    "neighborhood_city": "Parque imperial, Salto",
+    "neighborhood": "Parque imperial",
+    "city": "Salto",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -17,7 +19,8 @@
   },
   {
     "street": "Rua José Faria de Almeida",
-    "neighborhood_city": "Jardim das Palmeiras, Boituva",
+    "neighborhood": "Jardim das Palmeiras",
+    "city": "Boituva",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -25,7 +28,8 @@
   },
   {
     "street": "Rua José Faria de Carvalho",
-    "neighborhood_city": "Exemplo de texto sobresalente, Pouso Alegre",
+    "neighborhood": "Exemplo de texto sobresalente",
+    "city": "Pouso Alegre",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -33,7 +37,8 @@
   },
   {
     "street": "Avenida José Maria de Faria",
-    "neighborhood_city": "Lapa de Baixo, São Paulo",
+    "neighborhood": "Lapa de Baixo",
+    "city": "São Paulo",
     "state": {
       "name": "São Paulo",
       "acronym": "SP"
@@ -41,7 +46,8 @@
   },
   {
     "street": "Av. Afonso Pena",
-    "neighborhood_city": "Centro, Belo Horizonte",
+    "neighborhood": "Centro",
+    "city": "Belo Horizonte",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -49,7 +55,8 @@
   },
   {
     "street": "Rua da Bahia",
-    "neighborhood_city": "Lourdes, Belo Horizonte",
+    "neighborhood": "Lourdes",
+    "city": "Belo Horizonte",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -57,7 +64,8 @@
   },
   {
     "street": "Rua dos Guajajaras",
-    "neighborhood_city": "Funcionários, Belo Horizonte",
+    "neighborhood": "Funcionários",
+    "city": "Belo Horizonte",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -65,7 +73,8 @@
   },
   {
     "street": "Rua Gonçalves Dias",
-    "neighborhood_city": "Savassi, Belo Horizonte",
+    "neighborhood": "Savassi",
+    "city": "Belo Horizonte",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -73,7 +82,8 @@
   },
   {
     "street": "Av. Getúlio Vargas",
-    "neighborhood_city": "Funcionários, Belo Horizonte",
+    "neighborhood": "Funcionários",
+    "city": "Belo Horizonte",
     "state": {
       "name": "Minas Gerais",
       "acronym": "MG"
@@ -81,7 +91,8 @@
   },
   {
     "street": "Av. Paulista",
-    "neighborhood_city": "Bela Vista, São Paulo",
+    "neighborhood": "Bela Vista",
+    "city": "São Paulo",
     "state": {
       "name": "São Paulo",
       "acronym": "SP"
@@ -89,7 +100,8 @@
   },
   {
     "street": "Rua Augusta",
-    "neighborhood_city": "Consolação, São Paulo",
+    "neighborhood": "Consolação",
+    "city": "São Paulo",
     "state": {
       "name": "São Paulo",
       "acronym": "SP"
@@ -97,7 +109,8 @@
   },
   {
     "street": "Av. Brigadeiro Faria Lima",
-    "neighborhood_city": "Itaim Bibi, São Paulo",
+    "neighborhood": "Itaim Bibi",
+    "city": "São Paulo",
     "state": {
       "name": "São Paulo",
       "acronym": "SP"
@@ -105,7 +118,8 @@
   },
   {
     "street": "Rua Oscar Freire",
-    "neighborhood_city": "Jardins, São Paulo",
+    "neighborhood": "Jardins",
+    "city": "São Paulo",
     "state": {
       "name": "São Paulo",
       "acronym": "SP"
@@ -113,7 +127,8 @@
   },
   {
     "street": "Rua da Consolação",
-    "neighborhood_city": "Higienópolis, São Paulo",
+    "neighborhood": "Higienópolis",
+    "city": "São Paulo",
     "state": {
       "name": "São Paulo",
       "acronym": "SP"
@@ -121,7 +136,8 @@
   },
   {
     "street": "Rua da Praia de Belas",
-    "neighborhood_city": "Praia de Belas, Porto Alegre",
+    "neighborhood": "Praia de Belas",
+    "city": "Porto Alegre",
     "state": {
       "name": "Rio Grande do Sul",
       "acronym": "RS"
@@ -129,7 +145,8 @@
   },
   {
     "street": "Av. Borges de Medeiros",
-    "neighborhood_city": "Centro Histórico, Porto Alegre",
+    "neighborhood": "Centro Histórico",
+    "city": "Porto Alegre",
     "state": {
       "name": "Rio Grande do Sul",
       "acronym": "RS"
@@ -137,7 +154,8 @@
   },
   {
     "street": "Rua Padre Chagas",
-    "neighborhood_city": "Moinhos de Vento, Porto Alegre",
+    "neighborhood": "Moinhos de Vento",
+    "city": "Porto Alegre",
     "state": {
       "name": "Rio Grande do Sul",
       "acronym": "RS"
@@ -145,7 +163,8 @@
   },
   {
     "street": "Av. Carlos Gomes",
-    "neighborhood_city": "Boa Vista, Porto Alegre",
+    "neighborhood": "Boa Vista",
+    "city": "Porto Alegre",
     "state": {
       "name": "Rio Grande do Sul",
       "acronym": "RS"
@@ -153,7 +172,8 @@
   },
   {
     "street": "Rua 24 de Outubro",
-    "neighborhood_city": "Auxiliadora, Porto Alegre",
+    "neighborhood": "Auxiliadora",
+    "city": "Porto Alegre",
     "state": {
       "name": "Rio Grande do Sul",
       "acronym": "RS"
@@ -161,7 +181,8 @@
   },
   {
     "street": "Av. Atlântica",
-    "neighborhood_city": "Copacabana, Rio de Janeiro",
+    "neighborhood": "Copacabana",
+    "city": "Rio de Janeiro",
     "state": {
       "name": "Rio de Janeiro",
       "acronym": "RJ"
@@ -169,7 +190,8 @@
   },
   {
     "street": "Rua Ipanema",
-    "neighborhood_city": "Ipanema, Rio de Janeiro",
+    "neighborhood": "Ipanema",
+    "city": "Rio de Janeiro",
     "state": {
       "name": "Rio de Janeiro",
       "acronym": "RJ"
@@ -177,7 +199,8 @@
   },
   {
     "street": "Av. Vieira Souto",
-    "neighborhood_city": "Leblon, Rio de Janeiro",
+    "neighborhood": "Leblon",
+    "city": "Rio de Janeiro",
     "state": {
       "name": "Rio de Janeiro",
       "acronym": "RJ"
@@ -185,7 +208,8 @@
   },
   {
     "street": "Rua do Lavradio",
-    "neighborhood_city": "Centro, Rio de Janeiro",
+    "neighborhood": "Centro",
+    "city": "Rio de Janeiro",
     "state": {
       "name": "Rio de Janeiro",
       "acronym": "RJ"
@@ -193,7 +217,8 @@
   },
   {
     "street": "Rua da Carioca",
-    "neighborhood_city": "Centro, Rio de Janeiro",
+    "neighborhood": "Centro",
+    "city": "Rio de Janeiro",
     "state": {
       "name": "Rio de Janeiro",
       "acronym": "RJ"
@@ -201,7 +226,8 @@
   },
   {
     "street": "Av. Paulista",
-    "neighborhood_city": "Praia de Camburi, Vitória",
+    "neighborhood": "Praia de Camburi",
+    "city": "Vitória",
     "state": {
       "name": "Espírito Santo",
       "acronym": "ES"
@@ -209,7 +235,8 @@
   },
   {
     "street": "Rua da Lama",
-    "neighborhood_city": "Triângulo, Vila Velha",
+    "neighborhood": "Triângulo",
+    "city": "Vila Velha",
     "state": {
       "name": "Espírito Santo",
       "acronym": "ES"
@@ -217,7 +244,8 @@
   },
   {
     "street": "Rua Sete de Setembro",
-    "neighborhood_city": "Centro, Vitória",
+    "neighborhood": "Centro",
+    "city": "Vitória",
     "state": {
       "name": "Espírito Santo",
       "acronym": "ES"
@@ -225,7 +253,8 @@
   },
   {
     "street": "Rua Quinze de Novembro",
-    "neighborhood_city": "Centro, Vila Velha",
+    "neighborhood": "Centro",
+    "city": "Vila Velha",
     "state": {
       "name": "Espírito Santo",
       "acronym": "ES"
@@ -233,7 +262,8 @@
   },
   {
     "street": "Av. Beira Mar",
-    "neighborhood_city": "Praia de Camburi, Vitória",
+    "neighborhood": "Praia de Camburi",
+    "city": "Vitória",
     "state": {
       "name": "Espírito Santo",
       "acronym": "ES"
@@ -241,7 +271,8 @@
   },
   {
     "street": "Rua Felipe Schmidt",
-    "neighborhood_city": "Centro, Florianópolis",
+    "neighborhood": "Centro",
+    "city": "Florianópolis",
     "state": {
       "name": "Santa Catarina",
       "acronym": "SC"
@@ -249,7 +280,8 @@
   },
   {
     "street": "Av. Beira Mar Norte",
-    "neighborhood_city": "Centro, Florianópolis",
+    "neighborhood": "Centro",
+    "city": "Florianópolis",
     "state": {
       "name": "Santa Catarina",
       "acronym": "SC"
@@ -257,7 +289,8 @@
   },
   {
     "street": "Rua Almirante Tamandaré",
-    "neighborhood_city": "Centro, Florianópolis",
+    "neighborhood": "Centro",
+    "city": "Florianópolis",
     "state": {
       "name": "Santa Catarina",
       "acronym": "SC"
@@ -265,7 +298,8 @@
   },
   {
     "street": "Av. Atlântica",
-    "neighborhood_city": "Balneário Camboriú",
+    "neighborhood": "Centro",
+    "city": "Balneário Camboriú",
     "state": {
       "name": "Santa Catarina",
       "acronym": "SC"
@@ -273,7 +307,8 @@
   },
   {
     "street": "Rua Blumenau",
-    "neighborhood_city": "Centro, Blumenau",
+    "neighborhood": "Centro",
+    "city": "Blumenau",
     "state": {
       "name": "Santa Catarina",
       "acronym": "SC"
@@ -281,7 +316,8 @@
   },
   {
     "street": "Av. Epitácio Pessoa",
-    "neighborhood_city": "Tambaú, João Pessoa",
+    "neighborhood": "Tambaú",
+    "city": "João Pessoa",
     "state": {
       "name": "Paraíba",
       "acronym": "PB"
@@ -289,7 +325,8 @@
   },
   {
     "street": "Rua da Areia",
-    "neighborhood_city": "Centro Histórico, João Pessoa",
+    "neighborhood": "Centro Histórico",
+    "city": "João Pessoa",
     "state": {
       "name": "Paraíba",
       "acronym": "PB"
@@ -297,7 +334,8 @@
   },
   {
     "street": "Rua Cardoso Vieira",
-    "neighborhood_city": "Bessa, João Pessoa",
+    "neighborhood": "Bessa",
+    "city": "João Pessoa",
     "state": {
       "name": "Paraíba",
       "acronym": "PB"
@@ -305,7 +343,8 @@
   },
   {
     "street": "Av. Dom Pedro II",
-    "neighborhood_city": "Jaguaribe, João Pessoa",
+    "neighborhood": "Jaguaribe",
+    "city": "João Pessoa",
     "state": {
       "name": "Paraíba",
       "acronym": "PB"
@@ -313,7 +352,8 @@
   },
   {
     "street": "Rua Duque de Caxias",
-    "neighborhood_city": "Centro, Campina Grande",
+    "neighborhood": "Centro",
+    "city": "Campina Grande",
     "state": {
       "name": "Paraíba",
       "acronym": "PB"
@@ -321,7 +361,8 @@
   },
   {
     "street": "Av. Sete de Setembro",
-    "neighborhood_city": "Centro, Salvador",
+    "neighborhood": "Centro",
+    "city": "Salvador",
     "state": {
       "name": "Bahia",
       "acronym": "BA"
@@ -329,7 +370,8 @@
   },
   {
     "street": "Rua Chile",
-    "neighborhood_city": "Pelourinho, Salvador",
+    "neighborhood": "Pelourinho",
+    "city": "Salvador",
     "state": {
       "name": "Bahia",
       "acronym": "BA"
@@ -337,7 +379,8 @@
   },
   {
     "street": "Av. Otávio Mangabeira",
-    "neighborhood_city": "Pituba, Salvador",
+    "neighborhood": "Pituba",
+    "city": "Salvador",
     "state": {
       "name": "Bahia",
       "acronym": "BA"
@@ -345,7 +388,8 @@
   },
   {
     "street": "Rua Carlos Gomes",
-    "neighborhood_city": "Dois de Julho, Salvador",
+    "neighborhood": "Dois de Julho",
+    "city": "Salvador",
     "state": {
       "name": "Bahia",
       "acronym": "BA"
@@ -353,7 +397,8 @@
   },
   {
     "street": "Av. Tancredo Neves",
-    "neighborhood_city": "Caminho das Árvores, Salvador",
+    "neighborhood": "Caminho das Árvores",
+    "city": "Salvador",
     "state": {
       "name": "Bahia",
       "acronym": "BA"
@@ -361,7 +406,8 @@
   },
   {
     "street": "Av. Beira Mar",
-    "neighborhood_city": "Praia de Iracema, Fortaleza",
+    "neighborhood": "Praia de Iracema",
+    "city": "Fortaleza",
     "state": {
       "name": "Ceará",
       "acronym": "CE"
@@ -369,7 +415,8 @@
   },
   {
     "street": "Rua Dragão do Mar",
-    "neighborhood_city": "Praia de Iracema, Fortaleza",
+    "neighborhood": "Praia de Iracema",
+    "city": "Fortaleza",
     "state": {
       "name": "Ceará",
       "acronym": "CE"
@@ -377,7 +424,8 @@
   },
   {
     "street": "Av. Santos Dumont",
-    "neighborhood_city": "Aldeota, Fortaleza",
+    "neighborhood": "Aldeota",
+    "city": "Fortaleza",
     "state": {
       "name": "Ceará",
       "acronym": "CE"
@@ -385,7 +433,8 @@
   },
   {
     "street": "Rua Monsenhor Tabosa",
-    "neighborhood_city": "Centro, Fortaleza",
+    "neighborhood": "Centro",
+    "city": "Fortaleza",
     "state": {
       "name": "Ceará",
       "acronym": "CE"
@@ -393,7 +442,8 @@
   },
   {
     "street": "Rua do Sol",
-    "neighborhood_city": "Meireles, Fortaleza",
+    "neighborhood": "Meireles",
+    "city": "Fortaleza",
     "state": {
       "name": "Ceará",
       "acronym": "CE"

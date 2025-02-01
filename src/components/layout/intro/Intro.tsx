@@ -22,7 +22,7 @@ const Intro: React.FC<Props> = ({ isMobile }) => {
             lar.
           </p>
         </div>
-        <div className="max-w-lg justify-self-end rounded-2xl lg:bg-white lg:shadow-lg">
+        <div className="max-w-lg rounded-2xl lg:justify-self-end lg:bg-white lg:shadow-lg">
           <nav className="hidden w-full border-b-[1px] border-[#E1E5E9] lg:block">
             <ul className="flex justify-around">
               <li

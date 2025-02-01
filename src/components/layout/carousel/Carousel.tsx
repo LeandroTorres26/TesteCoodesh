@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import places from "../../../../assets/place.json";
-import flats from "../../../../assets/flats.json";
+import places from "../../../assets/place.json";
+import flats from "../../../assets/flats.json";
 
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";

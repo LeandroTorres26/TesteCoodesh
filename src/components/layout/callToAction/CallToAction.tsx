@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState, useCallback, useRef, useEffect } from "react";
-import addresses from "../../../../assets/addresses.json";
+import addresses from "../../../assets/addresses.json";
 
 interface Props {
   isMobile: boolean;
@@ -8,7 +8,8 @@ interface Props {
 
 interface Address {
   street: string;
-  neighborhood_city: string;
+  neighborhood: string;
+  city: string;
   state: {
     name: string;
     acronym: string;
@@ -46,9 +47,9 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
 
   const LocationSelect = useCallback(
     (event: React.MouseEvent<HTMLLIElement>) => {
-      const result = event.currentTarget.querySelector("address span");
+      const result = event.currentTarget.dataset.address;
       if (result) {
-        setSearchLocation(result.textContent || "");
+        setSearchLocation(result);
         setShowLocationResults(false);
       }
     },
@@ -61,11 +62,12 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
       : addresses
           .filter((address: Address) => {
             const searchTerm = searchLocation.trim().toLowerCase();
-            const { street, neighborhood_city, state } = address;
+            const { street, neighborhood, city, state } = address;
 
             return (
               street.toLowerCase().includes(searchTerm) ||
-              neighborhood_city.toLowerCase().includes(searchTerm) ||
+              neighborhood.toLowerCase().includes(searchTerm) ||
+              city.toLowerCase().includes(searchTerm) ||
               state.name.toLowerCase().includes(searchTerm) ||
               state.acronym.toLowerCase().includes(searchTerm)
             );
@@ -230,7 +232,7 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
             {showLocationResults && (
               <div
                 ref={locationDropdownRef}
-                className="absolute left-4 right-4 top-[90px] z-40 self-start rounded-2xl bg-white shadow-lg lg:left-auto lg:right-auto lg:top-[5.375rem] lg:max-w-[18.875rem]"
+                className="absolute left-4 right-4 top-[90px] z-40 self-start overflow-hidden rounded-2xl bg-white shadow-lg lg:left-auto lg:right-auto lg:top-[5.375rem] lg:max-w-[18.875rem]"
               >
                 <span className="block w-full px-6 py-3 text-center text-sm text-[#A1A7AA]">
                   Busque por cidade, região, bairro ou código
@@ -240,6 +242,7 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
                     <li
                       key={index}
                       className="cursor-pointer p-3 hover:bg-[#F4F6F9]"
+                      data-address={`${address.street}, ${address.neighborhood}, ${address.city} - ${address.state.acronym}`}
                       onClick={LocationSelect}
                     >
                       <address className="grid w-full grid-cols-[auto_1fr] items-center gap-x-2 not-italic">
@@ -253,7 +256,8 @@ const CallToAction: React.FC<Props> = ({ isMobile }) => {
                           {address.street}
                         </span>
                         <small className="col-[2/3] max-w-[30ch] text-xs text-[#4E5254]">
-                          {address.neighborhood_city} - {address.state.acronym}
+                          {address.neighborhood}, {address.city} {" - "}
+                          {address.state.name}
                         </small>
                       </address>
                     </li>
